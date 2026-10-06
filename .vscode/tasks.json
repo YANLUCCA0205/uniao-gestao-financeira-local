@@ -1,0 +1,1 @@
+{"version":"2.0.0","tasks":[{"label":"União: iniciar local","type":"npm","script":"dev","isBackground":true,"problemMatcher":[]},{"label":"União: verificar TypeScript","type":"npm","script":"check","problemMatcher":["$tsc"]},{"label":"União: preparar banco local","type":"npm","script":"setup:local","problemMatcher":[]}]}
