@@ -5,14 +5,16 @@ Aplicação privada para lançamentos diários de tesouraria, contas a pagar e r
 ## Entregue nesta versão
 
 - Visão geral por loja e período, compromissos, baixas, pendências e projeção de 7 dias.
-- Títulos a pagar e receber, categorias, baixas parciais atômicas e saldos em centavos.
+- Importação em lote de títulos exportados do ERP para contas a pagar e receber, com consolidação por loja, período, movimento e tipo de transação.
+- Consulta opcional e paginada dos títulos importados, sem recadastro individual como rotina.
 - Rotinas com data de execução e do movimento, início/fim, pausas tipadas e volume.
 - Médias por dias válidos, evolução semanal, quantidade, duração e índice de interrupções.
 - Cofres com diferença acumulada, valor explicado, regularização e justificativa.
 - Diferenças de caixa e pendências com responsável, prazo e próxima ação.
 - Contas, saldos informados, conciliação até uma data e frequência por conta.
 - Movimentações com transferências internas identificadas.
-- Relatórios enviados com cópia preservada dos dados, revisão e impressão/PDF via navegador.
+- Resumos gerenciais com previsto, realizado, vencidos, aberto, evolução semanal/mensal, comparações, anotações e providências; impressão/PDF via navegador.
+- Histórico das importações e dos fechamentos, com origem, data e usuário; arquivos substituídos são preservados como arquivados.
 - Rascunhos pessoais no banco, histórico de alterações e controle otimista de versão.
 - Cadastro de acesso por e-mail/perfil/loja, exportação JSON dos registros autorizados.
 
@@ -27,12 +29,13 @@ Almoço e interrupções são descontados. Índice de paradas = minutos de inter
 ## Limites e decisões pendentes
 
 - Início com dados vazios; os documentos antigos não foram importados automaticamente.
-- Integrações com ERP, extratos e importação dependem de amostras e mapeamento do sistema do usuário.
-- Lançamentos e saldos bancários são informados manualmente; baixas não alteram o saldo bancário informado. A conciliação é acompanhada, não executada automaticamente.
+- A primeira versão aceita arquivos CSV/TXT/TSV exportados do ERP. Formatos XLSX, integração direta e adaptações ao layout específico do ERP dependem de amostras e mapeamento.
+- Saldos bancários são informados manualmente; importação de extratos e conciliação automática não estão incluídas.
 - Projeção usa últimos saldos informados e títulos a vencer; precisa de saldos atualizados e completos. Não equivale a lucro.
 - Relatórios preservam a posição conhecida na data do envio; uma seleção de período passado não reconstrói automaticamente todos os saldos históricos anteriores ao primeiro envio.
 - Não inclui anexos nem assinatura digital gov.br; impressão/PDF usa o navegador.
-- Ajustes/estornos de baixas, importação, cadastros configuráveis de etapas/lojas e critérios/metas de prazo permanecem como próximas implementações.
+- Reimporte o mesmo movimento, loja e período completo para corrigir um arquivo. Sobreposições parciais são recusadas para impedir perda de dias do arquivo anterior.
+- Cadastros configuráveis de etapas/lojas e critérios/metas de prazo permanecem como próximas implementações.
 - Datas de fechamento e prazo de entrega do financeiro ainda precisam ser definidos. Semana de desempenho: sábado a sexta.
 - A liberação de acesso para equipe depende dos e-mails e lojas autorizadas.
 
