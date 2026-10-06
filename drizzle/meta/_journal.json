@@ -15,6 +15,13 @@
       "when": 1791226273236,
       "tag": "0001_quick_zemo",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791296100000,
+      "tag": "0002_erp_reporting",
+      "breakpoints": true
     }
   ]
 }

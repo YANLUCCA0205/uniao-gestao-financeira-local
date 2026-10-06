@@ -50,18 +50,21 @@ Para personalizar o nome ou testar outra pessoa, copie `.env.example` para `.env
 
 Esse modo não é um login com senha nem uma autenticação adequada para disponibilizar o sistema na rede da empresa ou na internet. Ele permite executar e desenvolver o projeto no seu computador. Para hospedagem independente com múltiplos usuários, será necessário configurar autenticação real no provedor escolhido e o banco persistente desse ambiente. A autenticação original do Site depende dos cabeçalhos da plataforma; copiá-la sem a plataforma não fornece um login de produção.
 
-## Funcionalidades preservadas
+## Funcionalidades
 
 - Painel gerencial, filtros por loja e período, projeções de 7, 15 e 30 dias.
-- Contas a pagar e receber, baixas parciais, saldo em aberto e atrasos por faixa.
+- Importação em lote de contas a pagar e receber exportadas pelo ERP em CSV UTF-8, com mapeamento das colunas.
+- Consolidação de previsto, realizado, quantidade, vencidos, saldo em aberto e tendências semanais/mensais por loja, movimento e tipo de transação.
+- Detalhamento paginado opcional para investigar títulos importados; não é necessário recadastrá-los nem baixá-los manualmente.
+- Fechamentos gerenciais com variações, providências, data, usuário e vínculos às importações de origem.
 - Rotina da tesouraria, almoço, interrupções e índices de paradas.
 - Cofres, diferenças de caixa, ranking, pendências e histórico.
 - Conciliação, saldos informados e movimentações.
 - Médias e gráficos de desempenho, sem considerar ausências como zero.
-- Rascunhos no banco, relatórios com dados preservados, revisão e impressão/PDF pelo navegador.
+- Rotina diária da tesouraria, relatórios com dados preservados, revisão e impressão/PDF pelo navegador.
 - Perfis e lojas autorizadas, trilha de alterações e exportação de registros.
 
-As limitações que já existiam na versão publicada também são preservadas: não há integração automática com ERP/bancos, anexos, assinatura gov.br ou estorno de baixas. Consulte `docs/ESCOPO-DA-VERSAO-ORIGINAL.md`.
+O financeiro recebe exportações CSV do ERP; integração direta, formatos XLSX e layouts específicos ainda dependem de uma amostra do ERP. O histórico mantém arquivos substituídos como arquivados. Ao corrigir dados, reimporte o mesmo tipo, loja e intervalo completo; intervalos parcialmente sobrepostos são recusados para evitar lacunas. Não há integração bancária automática, anexos ou assinatura gov.br. Consulte `docs/ESCOPO-DA-VERSAO-ORIGINAL.md`.
 
 ## Comandos
 
